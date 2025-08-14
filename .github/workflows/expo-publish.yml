@@ -17,9 +17,11 @@ jobs:
         with:
           node-version: 20
 
-      - run: npm ci
+      - name: Install deps
+        run: npm install --legacy-peer-deps
 
       - name: Publish to Expo
         run: npx expo publish --non-interactive
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+          EXPO_NO_TELEMETRY: 1
