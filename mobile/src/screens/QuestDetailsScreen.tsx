@@ -6,6 +6,7 @@ import type { Quest } from "../types/models";
 type RootStackParamList = {
   Map: undefined;
   QuestDetails: { quest: Quest };
+  TaskRunner: { quest: Quest };
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, "QuestDetails">;
@@ -27,6 +28,7 @@ export const QuestDetailsScreen: React.FC<Props> = ({ route, navigation }) => {
           <Text style={styles.hint}>Verify: {t.verification_type}</Text>
         </View>
       ))}
+      <Button title="Start" onPress={() => navigation.navigate("TaskRunner", { quest })} />
       <Button title="Back to Map" onPress={() => navigation.navigate("Map")} />
     </ScrollView>
   );
