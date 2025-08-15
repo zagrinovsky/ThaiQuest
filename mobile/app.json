@@ -18,7 +18,8 @@
         "NSLocationWhenInUseUsageDescription": "Show quests near you on the map.",
         "NSCameraUsageDescription": "Capture photos and videos for quest submissions.",
         "NSMicrophoneUsageDescription": "Record audio for video submissions."
-      }
+      },
+      "bundleIdentifier": "com.zagrinovsky.mobile"
     },
     "android": {
       "adaptiveIcon": {
